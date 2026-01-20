@@ -27,6 +27,17 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     });
+
+  const menuFilters = document.querySelector('.menu-filters');
+
+  window.addEventListener('scroll', () => {
+    if (menuFilters.getBoundingClientRect().top <= 90) {
+      menuFilters.classList.add('is-stuck');
+    } else {
+      menuFilters.classList.remove('is-stuck');
+    }
+  });
+
 });
 
 
@@ -99,7 +110,6 @@ async function cargarDatos() {
       `;
     }
   });
-
  }
 
 function cargarCategorias(categorias) {
@@ -300,7 +310,6 @@ function cargarRedes(redes) {
 }
 
 function agregarOrden(id, cantidad) {
-  vibrar(20); // vibración leve
   cantidad = parseInt(cantidad);
 
   const item = items.find(i => i.id === id);
@@ -319,6 +328,7 @@ function agregarOrden(id, cantidad) {
 
   actualizarContadorOrden();
   document.getElementById(`cantidad-${id}`).innerText = 1;
+  mostrarToastAgregado();
   mostrarFeedbackAgregado();
 }
 
@@ -662,8 +672,16 @@ function aplicarColores(colores) {
   root.style.setProperty("--accent-contrast", colores.secundario);
 }
 
-function vibrar(ms = 20) {
-  if (navigator.vibrate) {
-    navigator.vibrate(ms);
-  }
+
+function mostrarToastAgregado() {
+  const toast = document.getElementById("toast-agregado");
+  if (!toast) return;
+
+  toast.classList.remove("hidden");
+  toast.classList.add("mostrar");
+
+  setTimeout(() => {
+    toast.classList.remove("mostrar");
+    setTimeout(() => toast.classList.add("hidden"), 200);
+  }, 1200);
 }
