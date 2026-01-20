@@ -19,6 +19,22 @@ document.addEventListener("DOMContentLoaded", () => {
       hint.style.opacity = "0";
     });
   }
+  
+  document.addEventListener("DOMContentLoaded", () => {
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" && e.target.tagName === "INPUT") {
+          e.target.blur();
+        }
+      });
+    });
+
+    document.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") {
+      e.target.blur();
+    }
+  });
+
+
 });
 
 
@@ -291,6 +307,7 @@ function cargarRedes(redes) {
 }
 
 function agregarOrden(id, cantidad) {
+  vibrar(20); // vibración leve
   cantidad = parseInt(cantidad);
 
   const item = items.find(i => i.id === id);
@@ -434,15 +451,30 @@ function seleccionarTipo(tipo) {
 
   if (tipo === "domicilio") {
     contenedor.innerHTML = `
-      <input type="text" id="direccion" placeholder="Dirección completa">
+      <input 
+        type="text"
+        id="direccion"
+        placeholder="Dirección completa"
+        inputmode="text"
+        autocomplete="street-address"
+      >
     `;
   }
 
+
   if (tipo === "mesa") {
     contenedor.innerHTML = `
-      <input type="text" id="mesa" placeholder="Número de mesa">
+      <input 
+        type="number"
+        id="mesa"
+        placeholder="Número de mesa"
+        inputmode="numeric"
+        pattern="[0-9]*"
+        min="1"
+      >
     `;
   }
+
 }
 
 function actualizarScrollHint() {
@@ -635,4 +667,10 @@ function aplicarColores(colores) {
 
   root.style.setProperty("--accent-color", colores.primario);
   root.style.setProperty("--accent-contrast", colores.secundario);
+}
+
+function vibrar(ms = 20) {
+  if (navigator.vibrate) {
+    navigator.vibrate(ms);
+  }
 }

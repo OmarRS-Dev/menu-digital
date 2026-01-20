@@ -2949,3 +2949,16 @@ body.no-smooth {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
 }
+
+@media (hover: none) {
+  .btn-agregar:hover,
+  .btn-outline-accent:hover {
+    background-color: inherit;
+    color: inherit;
+    filter: none;
+  }
+}
+
+button:focus {
+  outline: none;
+}
