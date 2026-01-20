@@ -2527,11 +2527,6 @@ section,
   white-space: nowrap;
 }
 
-
-.btn-agregar:hover {
-  opacity: 0.5;
-}
-
 .horarios-list {
   list-style: none;
   padding: 0;
