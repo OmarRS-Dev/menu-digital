@@ -2962,3 +2962,20 @@ body.no-smooth {
 button:focus {
   outline: none;
 }
+
+.btn-agregar,
+.btn-outline-accent {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn-agregar:active,
+.btn-outline-accent:active {
+  filter: brightness(0.9);
+}
+
+@media (hover: none) {
+  .btn-agregar:hover,
+  .btn-outline-accent:hover {
+    filter: none;
+  }
+}

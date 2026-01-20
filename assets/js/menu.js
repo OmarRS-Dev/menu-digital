@@ -27,14 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     });
-
-    document.addEventListener("keydown", function (e) {
-    if (e.key === "Enter") {
-      e.target.blur();
-    }
-  });
-
-
 });
 
 
@@ -165,9 +157,10 @@ function cargarItems(items) {
                 </div>
 
                 <button class="btn-agregar"
-                        onclick="agregarOrden(${item.id}, document.getElementById('cantidad-${item.id}').innerText)">
+                  onclick="agregarOrden(${item.id}, document.getElementById('cantidad-${item.id}').innerText); this.blur();">
                   Agregar
                 </button>
+
 
               </div>
             </div>
