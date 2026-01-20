@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title id="titulo"></title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link id="favicon" rel="icon">
+  <link id="apple-icon" rel="apple-touch-icon">
+
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center gap-2">
+        <img id="logo-negocio" src="" alt="">
+        <span id="nombre-header" class="site-name"></span>
+      </a>
+   
+
+      <div class="order-section d-flex align-items-center gap-4 gap-sm-4">
+
+        <!-- Contador de orden -->
+        <div class="order-counter d-flex align-items-center">
+          <i class="bi bi-receipt"></i>
+          <span class="badge bg-danger" id="order-count">0</span>
+        </div>
+
+        <!-- Botón para finalizar orden -->
+        <button class="btn-getstarted fw-bold" onclick="abrirOrden()">
+          Finalizar Orden
+        </button>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Menú</h2>
+        <p id="frase-menu"></p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+          <div class="menu-filters isotope-filters mb-5">
+            <ul id="categorias-menu"></ul>
+          </div>
+
+          <div id="menu-items" class="menu-container isotope-container row gy-4"></div>
+
+
+        </div>
+
+      </div>
+
+      
+    </section><!-- /Menu Section -->
+
+ 
+    <!-- Location Section -->
+    <section id="location" class="location section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Localización</h2>
+        <p>Visitanos para darle gusto a tu paladar</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row g-4">
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
+            <div class="map-container">
+              <iframe
+                id="mapa-iframe"
+                width="100%"
+                height="100%"
+                style="border:0;"
+                allowfullscreen
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+            <div class="info-container">
+              <div class="section-header">
+                <h2>Encuentranos</h2>
+                <p id="eslogan"></p>
+              </div>
+
+              <div class="info-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="info-icon">
+                  <i class="bi bi-geo-alt"></i>
+                </div>
+                <div class="info-content">
+                  <h3>Nuestra localización</h3>
+                  <p id="direccion"></p>
+                </div>
+              </div>
+
+              <div class="info-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="info-icon">
+                  <i class="bi bi-telephone"></i>
+                </div>
+                <div class="info-content">
+                  <h3>Reservaciones</h3>
+                  <p id="reservas"></p>
+                  <p class="small-text">Recomendamos hacer la reservación con al menos 24 horas de anticipación</p>
+                </div>
+              </div>
+
+              <div class="info-card" data-aos="fade-up" data-aos-delay="500">
+                <div class="info-icon">
+                  <i class="bi bi-clock"></i>
+                </div>
+                <div class="info-content">
+                  <h3>Horario</h3>
+                  <div class="info-content">
+                    <ul id="lista-horarios" class="horarios-list"></ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cta-wrapper" data-aos="fade-up" data-aos-delay="600">
+                <a id="btn-maps"
+                  class="btn-book"
+                  target="_blank"
+                  rel="noopener">
+                  Ver en el mapa
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Location Section -->
+    
+
+  </main>
+
+  <footer id="footer" class="footer">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename" id="nombre"></span>
+          </a>
+          <p>Siguenos en nuestras redes sociales y no te pierdas ninguna novedad.</p>
+          <div id="social-links" class="social-links d-flex mt-4"></div>
+        </div>       
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>2026 Copyright</span> <strong class="px-1 sitename" id="nombre2">Cenaduia y Pasteleria La Antena</strong> <span>Todos los derechos reservados</span></p>
+      <div class="credits">
+        Desarrollado por <a href="https://bootstrapmade.com/">ORM - Software</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/menu.js"></script>  
+
+  <div id="order-modal" class="order-modal hidden">
+    <div class="order-card">
+
+      <div class="order-header">
+        <h4>Tu orden</h4>
+        <button class="close-btn" onclick="cerrarOrden()">×</button>
+      </div>
+
+      <div id="order-list" class="order-list">
+        <!-- items aquí -->
+      </div>
+
+      <div class="scroll-hint">
+        <span>Desliza para ver más</span>
+      </div>
+
+
+      <div class="order-footer">
+        <div class="order-total">
+          Total: <span id="order-total">$0</span>
+        </div>
+
+        <div class="order-customer">
+          <label for="customer-name">Nombre</label>
+          <input
+            type="text"
+            id="customer-name"
+            placeholder="¿A nombre de quién?"
+          />
+        </div>
+
+
+        
+        <div class="order-type">
+          <span class="order-label">Tipo de pedido</span>
+          <div class="order-options" id="order-options"></div>
+          <div id="extra-fields"></div>
+        </div>
+
+        <button class="btn-confirmar fw-bold" onclick="finalizarOrden()">
+          Enviar por WhatsApp
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+
+
+</body>
+
+</html>
