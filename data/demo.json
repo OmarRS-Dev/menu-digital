@@ -1,0 +1,126 @@
+{
+  "negocio": {
+    "titulo": "Tu Restaurante",
+    "nombre": "Mi Restaurante - Comida y bebida",
+    "eslogan": "La mejor comida de la región",
+    "frase_menu": "Dale un vistado a todo lo que en Tu Restaurante tenemos para ofrecerte",
+    "whatsapp": "526731151807",
+    "telefono": "673 100 0214",
+    "direccion": "Bulevard Antonio Rosales 49, Zona Centro, Guamúchil, Sinaloa",
+    "mapa_link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d593.4193847182202!2d-108.08042698387716!3d25.45683935426274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86bb87da4a652947%3A0xfb1ca06cb1ac99c4!2sH.%20Ayuntamiento%20de%20Salvador%20Alvarado!5e0!3m2!1ses-419!2smx!4v1769012912252!5m2!1ses-419!2smx",
+    "link_maps": "https://maps.app.goo.gl/12rKKJTGezAcsVpR7",
+    "reservaciones": "673 100 0214",
+    "logo": "logo.png",
+    "pedido": {
+      "llevar": true,
+      "aqui": true,
+      "domicilio": true,
+      "mesa": true
+    },
+    "colores": {
+    "primario": "#f0980e",
+    "secundario": "#000000"
+  }
+  },
+
+  "redes": [
+    {
+      "tipo": "instagram",
+      "url": "https://www.instagram.com/orm.software?igsh=MXU1azltYzhpcWxxcQ=="
+    },
+    {
+      "tipo": "whatsapp",
+      "url": "https://wa.me/526731151807"
+    }
+  ],
+
+  "horarios": [
+    {
+      "dias": ["lunes", "martes", "miércoles", "jueves"],
+      "abre": "13:00",
+      "cierra": "23:00"
+    },
+    {
+      "dias": ["viernes", "sábado"],
+      "abre": "13:00",
+      "cierra": "00:00"
+    },
+    {
+      "dias": ["domingo"],
+      "abre": "09:00",
+      "cierra": "16:00"
+    }
+  ],
+
+  "menu": {
+    "categorias": [
+      {
+        "id": "platillos",
+        "nombre": "Platillos"
+      },
+      {
+        "id": "postres",
+        "nombre": "Postres"
+      },
+      {
+        "id": "bebidas",
+        "nombre": "Bebidas"
+      },
+      {
+        "id": "pasteles",
+        "nombre": "Pasteles"
+      }
+    ],
+
+    "items": [
+      {
+        "id": 1,
+        "nombre": "Enchiladas Rojas",
+        "descripcion": "4 enchillas rellenas de queso y bañadas en salsa roja",
+        "precio": 140,
+        "categoria": "platillos",
+        "imagen": "enchiladas.jpg"
+      },
+      {
+        "id": 2,
+        "nombre": "Rebanada de Flan",
+        "descripcion": "Porción individual de flan",
+        "precio": 45,
+        "categoria": "postres",
+        "imagen": "flan.jpg"
+      },
+      {
+        "id": 3,
+        "nombre": "Agua de Jamaica - 1 litro",
+        "descripcion": "1 litro de agua de jamaica",
+        "precio": 35,
+        "categoria": "bebidas",
+        "imagen": "1-jamaica.jpg"
+      },
+      {
+        "id": 4,
+        "nombre": "Agua de Jamaica - Medio Litro",
+        "descripcion": "500 mililitros de agua de jamaica",
+        "precio": 20,
+        "categoria": "bebidas",
+        "imagen": "medio-jamaica.jpg"
+      },
+      {
+        "id": 5,
+        "nombre": "Pastel de Tres Leches - Rebanda",
+        "descripcion": "Porción individual de pastel de las tres leches",
+        "precio": 40,
+        "categoria": "pasteles",
+        "imagen": "pastel-tres-leches1.jpg"
+      },
+      {
+        "id": 6,
+        "nombre": "Pastel de Tres Leches - Pastel",
+        "descripcion": "Pastel entero de 3 leches",
+        "precio": 300,
+        "categoria": "pasteles",
+        "imagen": "pastel-tres-leches2.jpg"
+      }
+    ]
+  }
+}
