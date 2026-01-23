@@ -19,14 +19,12 @@ document.addEventListener("DOMContentLoaded", () => {
       hint.style.opacity = "0";
     });
   }
-  
-  document.addEventListener("DOMContentLoaded", () => {
-      document.addEventListener("keydown", function (e) {
+   
+  document.addEventListener("keydown", function (e) {
         if (e.key === "Enter" && e.target.tagName === "INPUT") {
           e.target.blur();
         }
       });
-    });
 
   const menuFilters = document.querySelector('.menu-filters');
 
@@ -130,30 +128,8 @@ function cargarCategorias(categorias) {
     li.textContent = cat.nombre;
     ul.appendChild(li);
   });
-
-  // AGREGAR ESTE CÓDIGO AL FINAL:
-  setTimeout(() => {
-    const menuFilters = document.querySelectorAll('.menu-filters li');
-    menuFilters.forEach(filter => {
-      filter.addEventListener('click', () => {
-        setTimeout(() => {
-          const menuSection = document.querySelector('.menu-filters');
-          const header = document.querySelector('#header');
-          
-          if (menuSection) {
-            // Detecta la altura real del header
-            const headerHeight = header ? header.offsetHeight : 90;
-            const offsetTop = menuSection.offsetTop - headerHeight - 10; // 10px extra de margen
-            
-            window.scrollTo({
-              top: offsetTop,
-              behavior: 'smooth'
-            });
-          }
-        }, 100);
-      });
-    });
-  }, 500);
+  
+  // NO agregues eventos aquí
 }
 
 function cargarItems(items) {
@@ -708,4 +684,16 @@ function mostrarToastAgregado() {
     toast.classList.remove("mostrar");
     setTimeout(() => toast.classList.add("hidden"), 200);
   }, 1200);
+}
+
+function scrollToMenuCategorias() {
+  const menu = document.getElementById("menu");
+  if (!menu) return;
+
+  const top = menu.getBoundingClientRect().top + window.scrollY;
+
+  window.scrollTo({
+    top,
+    behavior: "auto"
+  });
 }

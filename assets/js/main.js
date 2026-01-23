@@ -151,16 +151,26 @@
 
     isotopeItem.querySelectorAll('.isotope-filters li').forEach(function(filters) {
       filters.addEventListener('click', function() {
-        isotopeItem.querySelector('.isotope-filters .filter-active').classList.remove('filter-active');
+        isotopeItem.querySelector('.isotope-filters .filter-active')
+          .classList.remove('filter-active');
+
         this.classList.add('filter-active');
-        initIsotope.arrange({
-          filter: this.getAttribute('data-filter')
-        });
+
+        if (!initIsotope) return;
+
         if (typeof aosInit === 'function') {
           aosInit();
         }
+
+        initIsotope.arrange({
+            filter: this.getAttribute('data-filter')
+          });
+
+          scrollToMenuCategorias();
+
       }, false);
     });
+
 
   });
 
@@ -211,19 +221,5 @@
   if ('scrollRestoration' in history) {
     history.scrollRestoration = 'manual';
   }
-
-  // Forzar posición al inicio
-  document.addEventListener('DOMContentLoaded', function() {
-    window.scrollTo(0, 0);
-  });
-
-  window.addEventListener('load', function() {
-    window.scrollTo(0, 0);
-  });
-
-  // También al recargar
-  window.onbeforeunload = function() {
-    window.scrollTo(0, 0);
-  };
 
 })();

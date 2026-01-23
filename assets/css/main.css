@@ -455,8 +455,7 @@ section,
   color: var(--default-color);
   background-color: var(--background-color);
   padding: 60px 0;
-  scroll-margin-top: 90px;
-  overflow: clip;
+  overflow: visible; /* o simplemente elimina overflow */
   position: relative;
 }
 
