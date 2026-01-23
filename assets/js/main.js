@@ -1,11 +1,3 @@
-/**
-* Template Name: NiceRestaurant
-* Template URL: https://bootstrapmade.com/nice-restaurant-bootstrap-template/
-* Updated: Jun 06 2025 with Bootstrap v5.3.6
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 (function() {
   "use strict";
 
