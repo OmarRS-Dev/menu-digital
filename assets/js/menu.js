@@ -130,6 +130,30 @@ function cargarCategorias(categorias) {
     li.textContent = cat.nombre;
     ul.appendChild(li);
   });
+
+  // AGREGAR ESTE CÓDIGO AL FINAL:
+  setTimeout(() => {
+    const menuFilters = document.querySelectorAll('.menu-filters li');
+    menuFilters.forEach(filter => {
+      filter.addEventListener('click', () => {
+        setTimeout(() => {
+          const menuSection = document.querySelector('.menu-filters');
+          const header = document.querySelector('#header');
+          
+          if (menuSection) {
+            // Detecta la altura real del header
+            const headerHeight = header ? header.offsetHeight : 90;
+            const offsetTop = menuSection.offsetTop - headerHeight - 10; // 10px extra de margen
+            
+            window.scrollTo({
+              top: offsetTop,
+              behavior: 'smooth'
+            });
+          }
+        }, 100);
+      });
+    });
+  }, 500);
 }
 
 function cargarItems(items) {
