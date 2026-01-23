@@ -6,6 +6,11 @@
   --nav-font: "Poppins",  sans-serif;
 }
 
+:root {
+  --header-height: 72px;
+}
+
+
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
   --background-color: rgba(16, 23, 25, 0); /* Background color for the entire website, including individual sections */
@@ -91,6 +96,10 @@ h6 {
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
+
+header {
+  height: var(--header-height);
+}
 
 .header .container-fluid {
   padding-left: 20px;
@@ -1833,3 +1842,35 @@ section,
   top: 90px;
   z-index: 20;
 }
+
+.menu-filters {
+  position: sticky;
+  top: var(--header-height);
+  z-index: 20;
+
+  background: color-mix(
+    in srgb,
+    var(--background-color),
+    transparent 15%
+  );
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  padding: 12px 0;
+}
+
+.menu-filters.is-stuck {
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.menu-filters {
+  transition: box-shadow 0.3s ease;
+}
+
+.menu-filters {
+  width: 100%;
+}
+
+
+

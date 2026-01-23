@@ -3,7 +3,7 @@ let orden = {};
 let tipoPedido = "";
 let scrollPos = 0;
 let whatsappNegocio = "";
-let stickyOffset = 0;
+
 
 const NEGOCIO = detectarNegocio();
 const RUTA_IMG = `pics/${NEGOCIO}`;
@@ -26,6 +26,16 @@ document.addEventListener("DOMContentLoaded", () => {
           e.target.blur();
         }
       });
+
+  const menuFilters = document.querySelector('.menu-filters');
+
+  window.addEventListener('scroll', () => {
+    if (menuFilters.getBoundingClientRect().top <= 90) {
+      menuFilters.classList.add('is-stuck');
+    } else {
+      menuFilters.classList.remove('is-stuck');
+    }
+  });
 
 });
 
