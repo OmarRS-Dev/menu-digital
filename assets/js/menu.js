@@ -204,7 +204,7 @@ function detectarNegocio() {
   if (host.includes("antena")) return "antena";
   if (host.includes("laesquina")) return "la-esquina";
 
-  return "antena"; // fallback
+  return "demo"; // fallback
 }
 
 function cargarIconos() {
