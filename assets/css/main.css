@@ -783,7 +783,7 @@ section,
 /*--------------------------------------------------------------
 # Menu Section
 --------------------------------------------------------------*/
-.menu .menu-filters ul {
+.menu  ul {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -793,7 +793,7 @@ section,
   padding: 0;
 }
 
-.menu .menu-filters ul li {
+.menu ul li {
   padding: 8px 16px;
   font-size: 1rem;
   font-weight: 500;
@@ -805,21 +805,21 @@ section,
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
-.menu .menu-filters ul li:hover {
+.menu ul li:hover {
   background-color: color-mix(in srgb, var(--accent-color), transparent 80%);
 }
 
-.menu .menu-filters ul li.filter-active {
+.menu ul li.filter-active {
   background-color: var(--accent-color);
   color: var(--accent-contrast);
 }
 
 @media (max-width: 768px) {
-  .menu .menu-filters ul {
+  .menu  ul {
     gap: 8px;
   }
 
-  .menu .menu-filters ul li {
+  .menu  ul li {
     padding: 6px 12px;
     font-size: 0.9rem;
   }
@@ -1787,8 +1787,7 @@ button:focus {
   display: none;
 }
 
-.header,
-.menu-filters {
+.header{
   background: transparent;
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
@@ -1802,13 +1801,6 @@ button:focus {
   align-items: center;
 }
 
-.menu-filters {
-  position: sticky;
-  top: 75px;              /* MISMO valor que el header */
-  z-index: 998;
-}
-
-
 
 .scrolled .header {
   background: rgba(0, 0, 0, 0.7);
@@ -1817,17 +1809,9 @@ button:focus {
   box-shadow: 0 4px 12px rgba(0,0,0,.25);
 }
 
-.menu-filters.is-stuck {
-  background: rgba(0, 0, 0, 0.65);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  box-shadow: 0 4px 12px rgba(0,0,0,.25);
-}
-
 
 @media (min-width: 1024px) {
-  .scrolled .header,
-  .menu-filters.is-stuck {
+  .scrolled .header{
     background: rgba(0, 0, 0, 0.6);
   }
 }
@@ -1837,48 +1821,28 @@ section,
   scroll-margin-top: 100px;
 }
 
-.menu-filters {
-  position: sticky;
-  top: 90px;
-  z-index: 20;
-}
-
-.menu-filters {
-  position: sticky;
-  top: var(--header-height);
-  z-index: 20;
-
-  background: color-mix(
-    in srgb,
-    var(--background-color),
-    transparent 15%
-  );
-
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-
-  padding: 12px 0;
-}
-
-.menu-filters.is-stuck {
-  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-}
-
-.menu-filters {
-  transition: box-shadow 0.3s ease;
-}
-
-.menu-filters {
-  width: 100%;
-}
+/* ===============================
+   MENU CATEGORÍAS – STICKY FINAL
+   =============================== */
 
 .menu-categorias {
   position: sticky;
   top: var(--header-height);
   z-index: 997;
+
+  width: 100%;
+  padding: 12px 0;
+
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  box-shadow: none;
+
+  transition: background 0.25s ease, box-shadow 0.25s ease;
 }
 
-.menu-categorias.is-sticky {
+/* SOLO cuando realmente está sticky */
+.menu-categorias.is-stuck {
   background: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);

@@ -4,6 +4,8 @@ let tipoPedido = "";
 let scrollPos = 0;
 let whatsappNegocio = "";
 let recalculated = false;
+const categorias = document.querySelector('.menu-categorias');
+const sentinel = document.getElementById('categorias-sentinel');
 
 
 const NEGOCIO = detectarNegocio();
@@ -34,6 +36,19 @@ document.addEventListener("DOMContentLoaded", () => {
     window.dispatchEvent(new Event('resize'));
   }, { once: true });
 
+
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (!entry.isIntersecting) {
+        categorias.classList.add('is-stuck');
+      } else {
+        categorias.classList.remove('is-stuck');
+      }
+    },
+    { threshold: 0 }
+  );
+
+  observer.observe(sentinel);
   //AQUI TERMINA EL DOM LOADER
 });
 
