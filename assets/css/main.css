@@ -1872,5 +1872,15 @@ section,
   width: 100%;
 }
 
+.menu-categorias {
+  position: sticky;
+  top: var(--header-height);
+  z-index: 997;
+}
 
-
+.menu-categorias.is-sticky {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(0,0,0,.25);
+}

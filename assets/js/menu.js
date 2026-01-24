@@ -3,6 +3,7 @@ let orden = {};
 let tipoPedido = "";
 let scrollPos = 0;
 let whatsappNegocio = "";
+let recalculated = false;
 
 
 const NEGOCIO = detectarNegocio();
@@ -25,18 +26,15 @@ document.addEventListener("DOMContentLoaded", () => {
         if (e.key === "Enter" && e.target.tagName === "INPUT") {
           e.target.blur();
         }
-      });
-
-  const menuFilters = document.querySelector('.menu-filters');
+      }); 
 
   window.addEventListener('scroll', () => {
-    if (menuFilters.getBoundingClientRect().top <= 90) {
-      menuFilters.classList.add('is-stuck');
-    } else {
-      menuFilters.classList.remove('is-stuck');
-    }
-  });
+    if (recalculated) return;
+    recalculated = true;
+    window.dispatchEvent(new Event('resize'));
+  }, { once: true });
 
+  //AQUI TERMINA EL DOM LOADER
 });
 
 
@@ -698,3 +696,29 @@ function scrollToMenuCategorias() {
     behavior: "auto"
   });
 }
+
+function initCategoriasSticky() {
+  const categorias = document.querySelector('.menu-categorias');
+  const sentinel = document.getElementById('categorias-sentinel');
+  if (!categorias || !sentinel) return;
+
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      categorias.classList.toggle('is-sticky', !entry.isIntersecting);
+    },
+    {
+      rootMargin: `-${getComputedStyle(document.documentElement)
+        .getPropertyValue('--header-height')} 0px 0px 0px`
+    }
+  );
+
+  observer.observe(sentinel);
+}
+
+/* Desktop */
+document.addEventListener('DOMContentLoaded', initCategoriasSticky);
+
+/* Mobile FIX */
+window.addEventListener('load', () => {
+  setTimeout(initCategoriasSticky, 150);
+});
