@@ -73,54 +73,146 @@
     ],
 
     "items": [
-      {
-        "id": 1,
-        "nombre": "Enchiladas Rojas",
-        "descripcion": "4 enchillas rellenas de queso y bañadas en salsa roja",
-        "precio": 140,
-        "categoria": "platillos",
-        "imagen": "enchiladas.jpg"
-      },
-      {
-        "id": 2,
-        "nombre": "Rebanada de Flan",
-        "descripcion": "Porción individual de flan",
-        "precio": 45,
-        "categoria": "postres",
-        "imagen": "flan.jpg"
-      },
-      {
-        "id": 3,
-        "nombre": "Agua de Jamaica - 1 litro",
-        "descripcion": "1 litro de agua de jamaica",
-        "precio": 35,
-        "categoria": "bebidas",
-        "imagen": "1-jamaica.jpg"
-      },
-      {
-        "id": 4,
-        "nombre": "Agua de Jamaica - Medio Litro",
-        "descripcion": "500 mililitros de agua de jamaica",
-        "precio": 20,
-        "categoria": "bebidas",
-        "imagen": "medio-jamaica.jpg"
-      },
-      {
-        "id": 5,
-        "nombre": "Pastel de Tres Leches - Rebanda",
-        "descripcion": "Porción individual de pastel de las tres leches",
-        "precio": 40,
-        "categoria": "pasteles",
-        "imagen": "pastel-tres-leches1.jpg"
-      },
-      {
-        "id": 6,
-        "nombre": "Pastel de Tres Leches - Pastel",
-        "descripcion": "Pastel entero de 3 leches",
-        "precio": 300,
-        "categoria": "pasteles",
-        "imagen": "pastel-tres-leches2.jpg"
-      }
-    ]
+    {
+      "id": 1,
+      "nombre": "Enchiladas Rojas",
+      "descripcion": "4 enchiladas rellenas de queso bañadas en salsa roja",
+      "precio": 140,
+      "categoria": "platillos",
+      "imagen": "enchiladas.jpg"
+    },
+    {
+      "id": 2,
+      "nombre": "Flautas",
+      "descripcion": "4 flautas fritas rellenas de res con verdura",
+      "precio": 120,
+      "categoria": "platillos",
+      "imagen": "flautas.jpeg"
+    },
+    {
+      "id": 3,
+      "nombre": "Sopes",
+      "descripcion": "Tortillas de maíz con asientos, frijoles y queso",
+      "precio": 90,
+      "categoria": "platillos",
+      "imagen": "sopes.jpg"
+    },
+    {
+      "id": 4,
+      "nombre": "Chilaquiles Rojos",
+      "descripcion": "Totopos bañados en salsa roja con crema y queso",
+      "precio": 110,
+      "categoria": "platillos",
+      "imagen": "chilaquiles-rojos.jpg"
+    },
+    {
+      "id": 5,
+      "nombre": "Chilaquiles Verdes",
+      "descripcion": "Totopos bañados en salsa verde con crema y queso",
+      "precio": 110,
+      "categoria": "platillos",
+      "imagen": "chilaquiles-verdes.jpg"
+    },
+    {
+      "id": 6,
+      "nombre": "Huevos Rancheros",
+      "descripcion": "Huevos estrellados sobre tortilla con salsa ranchera",
+      "precio": 95,
+      "categoria": "platillos",
+      "imagen": "huevos-rancheros.jpg"
+    },
+
+    {
+      "id": 7,
+      "nombre": "Agua de Jamaica - 1 Litro",
+      "descripcion": "1 litro de agua fresca de jamaica",
+      "precio": 35,
+      "categoria": "bebidas",
+      "imagen": "jamaica-litro.jpg"
+    },
+    {
+      "id": 8,
+      "nombre": "Agua de Jamaica - Medio Litro",
+      "descripcion": "500 ml de agua fresca de jamaica",
+      "precio": 20,
+      "categoria": "bebidas",
+      "imagen": "jamaica-medio.jpg"
+    },
+    {
+      "id": 9,
+      "nombre": "Agua de Horchata - 1 Litro",
+      "descripcion": "Agua fresca de horchata natural",
+      "precio": 35,
+      "categoria": "bebidas",
+      "imagen": "horchata-litro.jpg"
+    },
+    {
+      "id": 10,
+      "nombre": "Coca-Cola",
+      "descripcion": "Coca-Cola de lata 355 ml",
+      "precio": 25,
+      "categoria": "bebidas",
+      "imagen": "refresco.png"
+    },
+    {
+      "id": 11,
+      "nombre": "Café Americano",
+      "descripcion": "Café caliente recién hecho",
+      "precio": 25,
+      "categoria": "bebidas",
+      "imagen": "cafe.jpg"
+    },
+
+    {
+      "id": 12,
+      "nombre": "Rebanada de Flan",
+      "descripcion": "Porción individual de flan casero",
+      "precio": 45,
+      "categoria": "postres",
+      "imagen": "flan.jpg"
+    },
+    {
+      "id": 13,
+      "nombre": "Arroz con Leche",
+      "descripcion": "Postre tradicional de arroz con canela",
+      "precio": 40,
+      "categoria": "postres",
+      "imagen": "arroz-lech.jpg"
+    },
+    {
+      "id": 14,
+      "nombre": "Gelatina de Mosaico",
+      "descripcion": "Gelatina de colores con leche",
+      "precio": 30,
+      "categoria": "postres",
+      "imagen": "gelatina.jpg"
+    },
+
+    {
+      "id": 15,
+      "nombre": "Pastel de Tres Leches - Rebanada",
+      "descripcion": "Porción individual de pastel tres leches",
+      "precio": 40,
+      "categoria": "pasteles",
+      "imagen": "pastel-tres-leches1.jpg"
+    },
+    {
+      "id": 16,
+      "nombre": "Pastel de Tres Leches - Pastel Completo",
+      "descripcion": "Pastel completo para varias personas",
+      "precio": 300,
+      "categoria": "pasteles",
+      "imagen": "pastel-tres-leches2.jpg"
+    },
+    {
+      "id": 17,
+      "nombre": "Pastel de Chocolate - Rebanada",
+      "descripcion": "Rebanada de pastel de chocolate",
+      "precio": 45,
+      "categoria": "pasteles",
+      "imagen": "pastel-chocolate.jpg"
+    }
+  ]
+
   }
 }
