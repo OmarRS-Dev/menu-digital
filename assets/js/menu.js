@@ -44,8 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
     recalcularSticky();
   });
 
-  setTimeout(recalcularSticky, 300);
-  //AQUI TERMINA EL DOM LOADER
+  recalcularSticky();
 });
 
 
