@@ -7,7 +7,7 @@
     "frase_menu": "Deleita tu paladar con el sazón que solo en El Callejón sabemos dar",
     "whatsapp": "526731000214",
     "telefono": "673 121 4935",
-    "direccion": "Nicolás Bravo, Col del Evora, 81460 Guamúchil, Sin.",
+    "direccion": "Nicolás Bravo, Col del Evora, Guamúchil, Sin.",
     "mapa_link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d225.1536563743477!2d-108.06982800064694!3d25.4563611061784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86bb87c3428e8b37%3A0x43b855876e101792!2sCenaduria%20%22El%20Callejon%22!5e0!3m2!1ses-419!2smx!4v1769448946887!5m2!1ses-419!2smx",
     "link_maps": "https://maps.app.goo.gl/mxcsfRarxfiLS4mcA",
     "reservaciones": "673 121 4935",
@@ -21,7 +21,7 @@
     "colores": {
     "primario": "#9c0f17",
     "secundario": "#FFFFFF",
-    "btnagregar":"FFFFFF"
+    "btnagregar":"#FFFFFF"
   }
   },
 

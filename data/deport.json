@@ -7,7 +7,7 @@
     "frase_menu": "Mira todo lo que tenemos para ofrecerte, no es por nada pero están muuuy buenas",
     "whatsapp": "526731000214",
     "telefono": "673 114 0567",
-    "direccion": "Av Mariano Matamoros Nte 152, Juárez, 81450 Guamúchil, Sin.",
+    "direccion": "Av Mariano Matamoros Nte 152, Juárez, Guamúchil, Sin.",
     "mapa_link": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d450.2745297376267!2d-108.07759759999999!3d25.465121999999997!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86bb8900632104c5%3A0x132e331f234e79c6!2sCenaduria%20la%20deport!5e0!3m2!1ses-419!2smx!4v1769292362638!5m2!1ses-419!2smx",
     "link_maps": "https://maps.app.goo.gl/u3wiKV6ruXQUkEiW7",
     "reservaciones": "673 114 0567",
@@ -21,7 +21,7 @@
     "colores": {
     "primario": "#99004C",
     "secundario": "#FFFFFF",
-    "btnagregar":"FFFFFF"
+    "btnagregar":"#FFFFFF"
   }
   },
 

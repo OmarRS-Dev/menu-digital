@@ -196,7 +196,7 @@ function detectarNegocio() {
 
   //if (host.includes("antena")) return "antena";  
 
-  return "callejon"; // fallback
+  return "brunch"; // fallback
 }
 
 function cargarIconos() {

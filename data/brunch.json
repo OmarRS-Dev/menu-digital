@@ -1,16 +1,16 @@
 {
   "negocio": {
-    "titulo": "La Antena",
-    "header_titulo":"La Antena",
-    "nombre": "Cenaduría y Pastelería La Antena",
-    "eslogan": "La señal del sabor",
-    "frase_menu": "Conoce todos los platillos que en Cenaduria y Pasteleria La Antena tenemos para ofrecerte",
+    "titulo": "Brunch Restaurant",
+    "header_titulo":"Brunch Restaurant",
+    "nombre": "Brunch Restaurant",
+    "eslogan": "Un buen día con alegria",
+    "frase_menu": "En Brunch Restaurant tenemos la mejor selección en comida de alta cocina",
     "whatsapp": "526731000214",
-    "telefono": "673 123 4567",
-    "direccion": "Uruguay 1116, Magisterio, 81470 Guamúchil, Sono",
-    "mapa_link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d616.7648372023024!2d-108.06879561375327!3d25.447430314291076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86bb87ea325c5881%3A0xb7852d33246005a6!2sLa%20Antena!5e0!3m2!1ses-419!2smx!4v1768230062439!5m2!1ses-419!2smx",
-    "link_maps": "https://maps.app.goo.gl/RhAvyzvwUuGy39bx8",
-    "reservaciones": "673 123 4567",
+    "telefono": "673 738 1033",
+    "direccion": "Av Mariano Matamoros Nte 1229, Niños Heroes, Guamúchil, Sinaloa",
+    "mapa_link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d292.89078661006465!2d-108.07412132689784!3d25.471073412647772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86bb893abf375889%3A0xdb9e63f8bad105cc!2sBrunch%20Restaurant!5e0!3m2!1ses-419!2smx!4v1769455805850!5m2!1ses-419!2smx",
+    "link_maps": "https://maps.app.goo.gl/QjB1MXByKUEM2kFU7",
+    "reservaciones": "673 738 1033",
     "logo": "logo.png",
     "pedido": {
       "llevar": true,
@@ -19,16 +19,16 @@
       "mesa": true
     },
     "colores": {
-    "primario": "#ffc918",
-    "secundario": "#000000",
-    "btnagregar":"000000"
+    "primario": "#895c2d",
+    "secundario": "#FFFFFF",
+    "btnagregar":"#FFFFFF"
   }
   },
 
   "redes": [
     {
       "tipo": "facebook",
-      "url": "https://www.facebook.com/cenaduriaypastelerialaantena/?locale=es_LA"
+      "url": "https://www.facebook.com/BrunchRestaurant1/"
     },
     {
       "tipo": "whatsapp",
@@ -126,7 +126,7 @@
       "descripcion": "Café recién molido, servido caliente",
       "precio": 35,
       "categoria": "bebidas",
-      "imagen": "cafe-americano.jpg"
+      "imagen": "cafe.jpg"
     },
     {
       "id": 8,
