@@ -1,6 +1,7 @@
 {
   "negocio": {
     "titulo": "Tu Restaurante",
+    "header_titulo":"Tu Restaurante",
     "nombre": "Mi Restaurante - Comida y bebida",
     "eslogan": "La mejor comida de la región",
     "frase_menu": "Dale un vistado a todo lo que en Tu Restaurante tenemos para ofrecerte",

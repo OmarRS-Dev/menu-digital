@@ -27,21 +27,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }); 
 
-  // NUEVA LÓGICA SIMPLE PARA STICKY
   const menuCategorias = document.querySelector('.menu-categorias');
-  
+  const headerHeight = 72;
+  const stickyOffset = menuCategorias.offsetTop - headerHeight;
+
   window.addEventListener('scroll', () => {
-    if (!menuCategorias) return;
-    
-    const rect = menuCategorias.getBoundingClientRect();
-    const headerHeight = 72; // tu header height
-    
-    if (rect.top <= headerHeight) {
+    if (window.scrollY >= stickyOffset) {
       menuCategorias.classList.add('is-stuck');
     } else {
       menuCategorias.classList.remove('is-stuck');
     }
   });
+
 
   //AQUI TERMINA EL DOM LOADER
 });
@@ -59,7 +56,7 @@ async function cargarDatos() {
   document.getElementById("direccion").textContent = negocio.direccion;
   document.getElementById("reservas").textContent = negocio.reservaciones;
   document.getElementById("nombre").textContent = negocio.nombre;
-  document.getElementById("nombre-header").textContent = negocio.titulo;
+  document.getElementById("nombre-header").textContent = negocio.header_titulo;
   document.getElementById("nombre2").textContent = negocio.nombre;
   document.getElementById("titulo").textContent = negocio.titulo;
 
@@ -210,7 +207,7 @@ function detectarNegocio() {
 
   //if (host.includes("antena")) return "antena";  
 
-  return "deport"; // fallback
+  return "callejon"; // fallback
 }
 
 function cargarIconos() {
@@ -388,8 +385,7 @@ function abrirOrden() {
 
   totalEl.innerText = `$${total}`;
 
-  document.body.style.top = `-${scrollPos}px`;
-  document.body.classList.add("no-scroll", "modal-open");
+  document.body.classList.add("no-scroll");
 
   modal.classList.remove("hidden");
   modal.classList.add("activo");
