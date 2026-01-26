@@ -717,3 +717,4 @@ function recalcularSticky() {
   const headerHeight = 72;
   stickyOffset = menuCategorias.offsetTop - headerHeight;
 }
+
