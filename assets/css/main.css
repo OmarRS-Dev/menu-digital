@@ -1826,7 +1826,7 @@ section,
 }
 
 /* ===============================
-   MENU CATEGORÍAS – STICKY FINAL
+   MENU CATEGORÍAS – STICKY REAL
    =============================== */
 
 .menu-categorias {
@@ -1838,21 +1838,35 @@ section,
   padding: 12px 0;
 
   background: transparent;
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
   box-shadow: none;
 
   transition: background 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* SOLO cuando realmente está sticky */
-.menu-categorias.is-stuck {
-  background: rgba(0, 0, 0, 0.7);
+/* Cuando YA ESTÁ PEGADO */
+.menu-categorias {
+   background: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   box-shadow: 0 4px 12px rgba(0,0,0,.25);
 }
 
-#sticky-sentinel {
-  height: 1px;
+/* truco clave */
+.menu-categorias:has(:not(:where(*))) {}
+
+@supports (position: sticky) {
+  .menu-categorias {
+     background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(0,0,0,.25);
+  }
+
+  .menu-categorias.sticky-active {
+     background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 4px 12px rgba(0,0,0,.25);
+  }
 }
+

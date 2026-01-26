@@ -62,9 +62,6 @@ async function cargarDatos() {
     }
   }, 0);
 
-  setTimeout(recalcularSticky, 500);
-
-
   // MAPA
   const iframeMapa = document.getElementById("mapa-iframe");
   if (iframeMapa && negocio.mapa_link) {
@@ -349,8 +346,6 @@ function abrirOrden() {
 
   if (Object.keys(orden).length === 0) return;
 
-  scrollPos = window.scrollY;
-
   const modal = document.getElementById("order-modal");
   const lista = document.getElementById("order-list");
   const totalEl = document.getElementById("order-total");
@@ -448,11 +443,10 @@ function seleccionarTipo(tipo) {
     contenedor.innerHTML = `
       <input 
         type="text"
-        id="direccion"
+        id="direccion-entrega"
         placeholder="Dirección completa"
-        inputmode="text"
-        autocomplete="street-address"
       >
+
     `;
   }
 
@@ -516,11 +510,11 @@ function finalizarOrden() {
   let extraInfo = "";
   
   if (tipoPedido === "domicilio") {
-    const inputDireccion = document.querySelector("#extra-fields #direccion");
+    const inputDireccion = document.querySelector("#extra-fields #direccion-entrega");
     const direccion = inputDireccion?.value.trim();
     if (!direccion) {
       mostrarError("Escribe la dirección de entrega");
-      document.getElementById("direccion")?.focus();
+      document.getElementById("direccion-entrega")?.focus();
       return;
     }
     extraInfo = `*Dirección:* ${direccion}`;
@@ -690,24 +684,3 @@ function scrollToMenuCategorias() {
     behavior: "auto"
   });
 }
-
-function initStickyObserver() {
-  const menu = document.querySelector('.menu-categorias');
-  const sentinel = document.getElementById('sticky-sentinel');
-
-  if (!menu || !sentinel) return;
-
-  const observer = new IntersectionObserver(
-    ([entry]) => {
-      menu.classList.toggle('is-stuck', !entry.isIntersecting);
-    },
-    {
-      rootMargin: `-${getComputedStyle(menu).top} 0px 0px 0px`,
-      threshold: 0
-    }
-  );
-
-  observer.observe(sentinel);
-}
-
-window.addEventListener("load", initStickyObserver);
