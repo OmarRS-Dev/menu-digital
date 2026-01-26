@@ -214,7 +214,7 @@ function detectarNegocio() {
 
   //if (host.includes("antena")) return "antena";  
 
-  return "callejon"; // fallback
+  return "antena"; // fallback
 }
 
 function cargarIconos() {
