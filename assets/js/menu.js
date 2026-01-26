@@ -3,6 +3,7 @@ let orden = {};
 let tipoPedido = "";
 let scrollPos = 0;
 let whatsappNegocio = "";
+let stickyOffset = 0;
 
 
 const NEGOCIO = detectarNegocio();
@@ -10,7 +11,8 @@ const RUTA_IMG = `pics/${NEGOCIO}`;
 const RUTA_JSON = `data/${NEGOCIO}.json`;
 
 document.addEventListener("DOMContentLoaded", () => {
-  cargarDatos();
+  cargarDatos();  
+
 
   const list = document.getElementById("order-list");
   const hint = document.querySelector(".scroll-hint");
@@ -28,8 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }); 
 
   const menuCategorias = document.querySelector('.menu-categorias');
-  const headerHeight = 72;
-  const stickyOffset = menuCategorias.offsetTop - headerHeight;
 
   window.addEventListener('scroll', () => {
     if (window.scrollY >= stickyOffset) {
@@ -40,6 +40,11 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
+  window.addEventListener('resize', () => {
+    recalcularSticky();
+  });
+
+  setTimeout(recalcularSticky, 300);
   //AQUI TERMINA EL DOM LOADER
 });
 
@@ -75,6 +80,9 @@ async function cargarDatos() {
       initIsotopeLayout();
     }
   }, 0);
+
+  setTimeout(recalcularSticky, 500);
+
 
   // MAPA
   const iframeMapa = document.getElementById("mapa-iframe");
@@ -700,4 +708,12 @@ function scrollToMenuCategorias() {
     top,
     behavior: "auto"
   });
+}
+
+function recalcularSticky() {
+  const menuCategorias = document.querySelector('.menu-categorias');
+  if (!menuCategorias) return;
+
+  const headerHeight = 72;
+  stickyOffset = menuCategorias.offsetTop - headerHeight;
 }
