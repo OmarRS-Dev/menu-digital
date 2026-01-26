@@ -67,10 +67,6 @@
       {
         "id": "bebidas",
         "nombre": "Bebidas"
-      },
-      {
-        "id": "pasteles",
-        "nombre": "Pasteles"
       }
     ],
 
@@ -188,31 +184,6 @@
         "precio": 30,
         "categoria": "postres",
         "imagen": "gelatina.jpg"
-      },
-
-      {
-        "id": 15,
-        "nombre": "Pastel de Tres Leches - Rebanada",
-        "descripcion": "Porción individual de pastel tres leches",
-        "precio": 40,
-        "categoria": "pasteles",
-        "imagen": "pastel-tres-leches1.jpg"
-      },
-      {
-        "id": 16,
-        "nombre": "Pastel de Tres Leches - Pastel Completo",
-        "descripcion": "Pastel completo para varias personas",
-        "precio": 300,
-        "categoria": "pasteles",
-        "imagen": "pastel-tres-leches2.jpg"
-      },
-      {
-        "id": 17,
-        "nombre": "Pastel de Chocolate - Rebanada",
-        "descripcion": "Rebanada de pastel de chocolate",
-        "precio": 45,
-        "categoria": "pasteles",
-        "imagen": "pastel-chocolate.jpg"
       }
     ]
   }

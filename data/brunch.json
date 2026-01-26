@@ -1,0 +1,183 @@
+{
+  "negocio": {
+    "titulo": "La Antena",
+    "header_titulo":"La Antena",
+    "nombre": "Cenaduría y Pastelería La Antena",
+    "eslogan": "La señal del sabor",
+    "frase_menu": "Conoce todos los platillos que en Cenaduria y Pasteleria La Antena tenemos para ofrecerte",
+    "whatsapp": "526731000214",
+    "telefono": "673 123 4567",
+    "direccion": "Uruguay 1116, Magisterio, 81470 Guamúchil, Sono",
+    "mapa_link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d616.7648372023024!2d-108.06879561375327!3d25.447430314291076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86bb87ea325c5881%3A0xb7852d33246005a6!2sLa%20Antena!5e0!3m2!1ses-419!2smx!4v1768230062439!5m2!1ses-419!2smx",
+    "link_maps": "https://maps.app.goo.gl/RhAvyzvwUuGy39bx8",
+    "reservaciones": "673 123 4567",
+    "logo": "logo.png",
+    "pedido": {
+      "llevar": true,
+      "aqui": true,
+      "domicilio": true,
+      "mesa": true
+    },
+    "colores": {
+    "primario": "#ffc918",
+    "secundario": "#000000",
+    "btnagregar":"000000"
+  }
+  },
+
+  "redes": [
+    {
+      "tipo": "facebook",
+      "url": "https://www.facebook.com/cenaduriaypastelerialaantena/?locale=es_LA"
+    },
+    {
+      "tipo": "whatsapp",
+      "url": "https://wa.me/526731000214"
+    }
+  ],
+
+  "horarios": [
+    {
+      "dias": ["lunes", "martes", "miércoles", "jueves"],
+      "abre": "13:00",
+      "cierra": "23:00"
+    },
+    {
+      "dias": ["viernes", "sábado"],
+      "abre": "13:00",
+      "cierra": "00:00"
+    },
+    {
+      "dias": ["domingo"],
+      "abre": "09:00",
+      "cierra": "16:00"
+    }
+  ],
+
+  "menu": {
+  "categorias": [
+    {
+      "id": "platillos",
+      "nombre": "Platillos"
+    },
+    {
+      "id": "postres",
+      "nombre": "Postres"
+    },
+    {
+      "id": "bebidas",
+      "nombre": "Bebidas"
+    }
+  ],
+
+  "items": [
+    {
+      "id": 1,
+      "nombre": "Pechuga de Pollo en Salsa de Champiñones",
+      "descripcion": "Pechuga de pollo a la plancha bañada en salsa cremosa de champiñones, acompañada de puré de papa",
+      "precio": 185,
+      "categoria": "platillos",
+      "imagen": "pechuga-champinones.jpg"
+    },
+    {
+      "id": 2,
+      "nombre": "Pechuga de Pollo a la Parrilla",
+      "descripcion": "Pechuga jugosa a la parrilla con ensalada fresca y aderezo de la casa",
+      "precio": 170,
+      "categoria": "platillos",
+      "imagen": "pechuga-parrilla.jpg"
+    },
+    {
+      "id": 3,
+      "nombre": "Omelette de Espinaca y Queso",
+      "descripcion": "Omelette esponjoso relleno de espinaca salteada y queso, acompañado de pan artesanal",
+      "precio": 140,
+      "categoria": "platillos",
+      "imagen": "omelette-espinaca.jpg"
+    },
+    {
+      "id": 4,
+      "nombre": "Chilaquiles Verdes con Pollo",
+      "descripcion": "Totopos crujientes bañados en salsa verde, servidos con pollo deshebrado, crema y queso",
+      "precio": 155,
+      "categoria": "platillos",
+      "imagen": "chilaquiles-verdes-pollo.jpg"
+    },
+    {
+      "id": 5,
+      "nombre": "Hotcakes Artesanales",
+      "descripcion": "Tres hotcakes esponjosos acompañados de fruta fresca y miel de maple",
+      "precio": 130,
+      "categoria": "platillos",
+      "imagen": "hotcakes.jpg"
+    },
+    {
+      "id": 6,
+      "nombre": "Ensalada Fresca de la Casa",
+      "descripcion": "Mezcla de lechugas, jitomate cherry, pepino y aderezo especial",
+      "precio": 120,
+      "categoria": "platillos",
+      "imagen": "ensalada-casa.jpg"
+    },
+
+    {
+      "id": 7,
+      "nombre": "Café Americano",
+      "descripcion": "Café recién molido, servido caliente",
+      "precio": 35,
+      "categoria": "bebidas",
+      "imagen": "cafe-americano.jpg"
+    },
+    {
+      "id": 8,
+      "nombre": "Cappuccino",
+      "descripcion": "Café espresso con leche vaporizada y espuma suave",
+      "precio": 55,
+      "categoria": "bebidas",
+      "imagen": "cappuccino.jpg"
+    },
+    {
+      "id": 9,
+      "nombre": "Jugo Natural de Naranja",
+      "descripcion": "Jugo natural recién exprimido",
+      "precio": 45,
+      "categoria": "bebidas",
+      "imagen": "jugo-naranja.jpg"
+    },
+    {
+      "id": 10,
+      "nombre": "Agua Mineral",
+      "descripcion": "Agua mineral natural",
+      "precio": 30,
+      "categoria": "bebidas",
+      "imagen": "agua-mineral.jpg"
+    },
+
+    {
+      "id": 11,
+      "nombre": "Rebanada de Cheesecake",
+      "descripcion": "Cheesecake cremoso con base de galleta",
+      "precio": 65,
+      "categoria": "postres",
+      "imagen": "cheesecake.jpg"
+    },
+    {
+      "id": 12,
+      "nombre": "Flan Casero",
+      "descripcion": "Flan tradicional preparado en casa",
+      "precio": 55,
+      "categoria": "postres",
+      "imagen": "flan.jpg"
+    },
+    {
+      "id": 13,
+      "nombre": "Brownie de Chocolate",
+      "descripcion": "Brownie tibio de chocolate con textura suave",
+      "precio": 60,
+      "categoria": "postres",
+      "imagen": "brownie.jpg"
+    }
+  ]
+}
+
+}

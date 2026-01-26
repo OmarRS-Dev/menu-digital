@@ -3,7 +3,6 @@ let orden = {};
 let tipoPedido = "";
 let scrollPos = 0;
 let whatsappNegocio = "";
-let stickyOffset = 0;
 
 
 const NEGOCIO = detectarNegocio();
@@ -28,23 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
       e.target.blur();
     }
   }); 
-
-  const menuCategorias = document.querySelector('.menu-categorias');
-
-  window.addEventListener('scroll', () => {
-    if (window.scrollY >= stickyOffset) {
-      menuCategorias.classList.add('is-stuck');
-    } else {
-      menuCategorias.classList.remove('is-stuck');
-    }
-  });
-
-
-  window.addEventListener('resize', () => {
-    recalcularSticky();
-  });
-
-  recalcularSticky();
 });
 
 
@@ -214,7 +196,7 @@ function detectarNegocio() {
 
   //if (host.includes("antena")) return "antena";  
 
-  return "antena"; // fallback
+  return "callejon"; // fallback
 }
 
 function cargarIconos() {
@@ -709,11 +691,23 @@ function scrollToMenuCategorias() {
   });
 }
 
-function recalcularSticky() {
-  const menuCategorias = document.querySelector('.menu-categorias');
-  if (!menuCategorias) return;
+function initStickyObserver() {
+  const menu = document.querySelector('.menu-categorias');
+  const sentinel = document.getElementById('sticky-sentinel');
 
-  const headerHeight = 72;
-  stickyOffset = menuCategorias.offsetTop - headerHeight;
+  if (!menu || !sentinel) return;
+
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      menu.classList.toggle('is-stuck', !entry.isIntersecting);
+    },
+    {
+      rootMargin: `-${getComputedStyle(menu).top} 0px 0px 0px`,
+      threshold: 0
+    }
+  );
+
+  observer.observe(sentinel);
 }
 
+window.addEventListener("load", initStickyObserver);
