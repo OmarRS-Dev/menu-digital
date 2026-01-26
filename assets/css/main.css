@@ -20,6 +20,7 @@
   --accent-contrast: #000000; /* Color that contraste with the accent to not lost visibilty of text */
   --surface-color: #252a2b; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --add-btn-color: #000000;
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
@@ -1305,7 +1306,7 @@ section,
 /* Botón AGREGAR */
 .btn-agregar {
   background-color: var(--accent-color);
-  color: #000;
+  color: var(--add-btn-color);
   font-weight: bold;
   padding: 8px 20px;
   border-radius: 8px;

@@ -4,7 +4,7 @@
     "nombre": "Mi Restaurante - Comida y bebida",
     "eslogan": "La mejor comida de la región",
     "frase_menu": "Dale un vistado a todo lo que en Tu Restaurante tenemos para ofrecerte",
-    "whatsapp": "526731151807",
+    "whatsapp": "526731000214",
     "telefono": "673 100 0214",
     "direccion": "Bulevard Antonio Rosales 49, Zona Centro, Guamúchil, Sinaloa",
     "mapa_link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d593.4193847182202!2d-108.08042698387716!3d25.45683935426274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86bb87da4a652947%3A0xfb1ca06cb1ac99c4!2sH.%20Ayuntamiento%20de%20Salvador%20Alvarado!5e0!3m2!1ses-419!2smx!4v1769012912252!5m2!1ses-419!2smx",
@@ -19,7 +19,8 @@
     },
     "colores": {
     "primario": "#f0980e",
-    "secundario": "#000000"
+    "secundario": "#000000",
+    "btnagregar":"000000"
   }
   },
 
@@ -30,7 +31,7 @@
     },
     {
       "tipo": "whatsapp",
-      "url": "https://wa.me/526731151807"
+      "url": "https://wa.me/526731000214"
     }
   ],
 

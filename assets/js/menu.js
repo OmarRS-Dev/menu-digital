@@ -3,9 +3,6 @@ let orden = {};
 let tipoPedido = "";
 let scrollPos = 0;
 let whatsappNegocio = "";
-let recalculated = false;
-const categorias = document.querySelector('.menu-categorias');
-const sentinel = document.getElementById('categorias-sentinel');
 
 
 const NEGOCIO = detectarNegocio();
@@ -25,30 +22,27 @@ document.addEventListener("DOMContentLoaded", () => {
   }
    
   document.addEventListener("keydown", function (e) {
-        if (e.key === "Enter" && e.target.tagName === "INPUT") {
-          e.target.blur();
-        }
-      }); 
+    if (e.key === "Enter" && e.target.tagName === "INPUT") {
+      e.target.blur();
+    }
+  }); 
 
+  // NUEVA LÓGICA SIMPLE PARA STICKY
+  const menuCategorias = document.querySelector('.menu-categorias');
+  
   window.addEventListener('scroll', () => {
-    if (recalculated) return;
-    recalculated = true;
-    window.dispatchEvent(new Event('resize'));
-  }, { once: true });
+    if (!menuCategorias) return;
+    
+    const rect = menuCategorias.getBoundingClientRect();
+    const headerHeight = 72; // tu header height
+    
+    if (rect.top <= headerHeight) {
+      menuCategorias.classList.add('is-stuck');
+    } else {
+      menuCategorias.classList.remove('is-stuck');
+    }
+  });
 
-
-  const observer = new IntersectionObserver(
-    ([entry]) => {
-      if (!entry.isIntersecting) {
-        categorias.classList.add('is-stuck');
-      } else {
-        categorias.classList.remove('is-stuck');
-      }
-    },
-    { threshold: 0 }
-  );
-
-  observer.observe(sentinel);
   //AQUI TERMINA EL DOM LOADER
 });
 
@@ -165,7 +159,7 @@ function cargarItems(items) {
               <div class="flex-grow-1">
                 <h5>${item.nombre}</h5>
                 <p class="mb-2">${item.descripcion}</p>
-                <div class="price">$${item.precio}</div>
+                <div class="price fw-bold fs-4">$${item.precio}</div>
               </div>
 
               <div class="order-controls d-flex flex-column align-items-center gap-2">
@@ -212,12 +206,11 @@ function cambiarCantidad(id, cambio) {
 }
 
 function detectarNegocio() {
-  const host = window.location.hostname;
+  //const host = window.location.hostname;
 
-  if (host.includes("antena")) return "antena";
-  if (host.includes("laesquina")) return "la-esquina";
+  //if (host.includes("antena")) return "antena";  
 
-  return "demo"; // fallback
+  return "deport"; // fallback
 }
 
 function cargarIconos() {
@@ -683,7 +676,8 @@ function aplicarColores(colores) {
   const root = document.documentElement;
 
   root.style.setProperty("--accent-color", colores.primario);
-  root.style.setProperty("--accent-contrast", colores.secundario);
+  root.style.setProperty("--accent-contrast", colores.secundario);  
+  root.style.setProperty("--add-btn-color", colores.btnagregar);
 }
 
 
@@ -711,29 +705,3 @@ function scrollToMenuCategorias() {
     behavior: "auto"
   });
 }
-
-function initCategoriasSticky() {
-  const categorias = document.querySelector('.menu-categorias');
-  const sentinel = document.getElementById('categorias-sentinel');
-  if (!categorias || !sentinel) return;
-
-  const observer = new IntersectionObserver(
-    ([entry]) => {
-      categorias.classList.toggle('is-sticky', !entry.isIntersecting);
-    },
-    {
-      rootMargin: `-${getComputedStyle(document.documentElement)
-        .getPropertyValue('--header-height')} 0px 0px 0px`
-    }
-  );
-
-  observer.observe(sentinel);
-}
-
-/* Desktop */
-document.addEventListener('DOMContentLoaded', initCategoriasSticky);
-
-/* Mobile FIX */
-window.addEventListener('load', () => {
-  setTimeout(initCategoriasSticky, 150);
-});
