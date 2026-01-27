@@ -1,0 +1,220 @@
+{
+  "negocio": {
+    "titulo": "La Cocina de la Abuela",
+    "header_titulo":"La Cocina de la Abuela",
+    "nombre": "La Cocina de la Abuela",
+    "eslogan": "El mejor sabor casero",
+    "frase_menu": "Vena  disfrutar de una comida saborsa y casero en las manos de la abuela",
+    "whatsapp": "526731000214",
+    "telefono": "503 7373 3677",
+    "direccion": "Col del Evora, 81460 Guamúchil, Sinaloa",
+    "mapa_link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.402768821781!2d-108.0687504!3d25.458223099999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86bb87e6e028fa7d%3A0xc10f4f5ad4106e7e!2sLa%20Cocina%20De%20La%20Abuela!5e0!3m2!1ses-419!2smx!4v1769479257905!5m2!1ses-419!2smx",
+    "link_maps": "https://maps.app.goo.gl/QU4QnYkCmsw7Rm7t98",
+    "reservaciones": "503 7373 3677",
+    "logo": "logo.png",
+    "pedido": {
+      "llevar": true,
+      "aqui": true,
+      "domicilio": true,
+      "mesa": true
+    },
+    "colores": {
+    "primario": "#fc983a",
+    "secundario": "#000000",
+    "btnagregar":"#000000"
+  }
+  },
+
+  "redes": [
+    {
+      "tipo": "facebook",
+      "url": "https://www.facebook.com/profile.php?id=100072188215849&locale=es_LA"
+    },
+    {
+      "tipo": "whatsapp",
+      "url": "https://wa.me/526731000214"
+    }
+  ],
+
+  "horarios": [
+    {
+      "dias": ["lunes", "martes", "miércoles", "jueves"],
+      "abre": "13:00",
+      "cierra": "23:00"
+    },
+    {
+      "dias": ["viernes", "sábado"],
+      "abre": "13:00",
+      "cierra": "00:00"
+    },
+    {
+      "dias": ["domingo"],
+      "abre": "09:00",
+      "cierra": "16:00"
+    }
+  ],
+
+  "menu": {
+    "categorias": [
+      {
+        "id": "platillos",
+        "nombre": "Platillos"
+      },
+      {
+        "id": "postres",
+        "nombre": "Postres"
+      },
+      {
+        "id": "bebidas",
+        "nombre": "Bebidas"
+      },
+      {
+        "id": "pasteles",
+        "nombre": "Pasteles"
+      }
+    ],
+
+    "items": [
+    {
+      "id": 1,
+      "nombre": "Enchiladas Rojas",
+      "descripcion": "4 enchiladas rellenas de queso bañadas en salsa roja",
+      "precio": 140,
+      "categoria": "platillos",
+      "imagen": "enchiladas.jpg"
+    },
+    {
+      "id": 2,
+      "nombre": "Flautas",
+      "descripcion": "4 flautas fritas rellenas de res con verdura",
+      "precio": 120,
+      "categoria": "platillos",
+      "imagen": "flautas.jpeg"
+    },
+    {
+      "id": 3,
+      "nombre": "Sopes",
+      "descripcion": "Tortillas de maíz con asientos, frijoles y queso",
+      "precio": 90,
+      "categoria": "platillos",
+      "imagen": "sopes.jpg"
+    },
+    {
+      "id": 4,
+      "nombre": "Chilaquiles Rojos",
+      "descripcion": "Totopos bañados en salsa roja con crema y queso",
+      "precio": 110,
+      "categoria": "platillos",
+      "imagen": "chilaquiles-rojos.jpg"
+    },
+    {
+      "id": 5,
+      "nombre": "Chilaquiles Verdes",
+      "descripcion": "Totopos bañados en salsa verde con crema y queso",
+      "precio": 110,
+      "categoria": "platillos",
+      "imagen": "chilaquiles-verdes.jpg"
+    },
+    {
+      "id": 6,
+      "nombre": "Huevos Rancheros",
+      "descripcion": "Huevos estrellados sobre tortilla con salsa ranchera",
+      "precio": 95,
+      "categoria": "platillos",
+      "imagen": "huevos-rancheros.jpg"
+    },
+
+    {
+      "id": 7,
+      "nombre": "Agua de Jamaica - 1 Litro",
+      "descripcion": "1 litro de agua fresca de jamaica",
+      "precio": 35,
+      "categoria": "bebidas",
+      "imagen": "jamaica-litro.jpg"
+    },
+    {
+      "id": 8,
+      "nombre": "Agua de Jamaica - Medio Litro",
+      "descripcion": "500 ml de agua fresca de jamaica",
+      "precio": 20,
+      "categoria": "bebidas",
+      "imagen": "jamaica-medio.jpg"
+    },
+    {
+      "id": 9,
+      "nombre": "Agua de Horchata - 1 Litro",
+      "descripcion": "Agua fresca de horchata natural",
+      "precio": 35,
+      "categoria": "bebidas",
+      "imagen": "horchata-litro.jpg"
+    },
+    {
+      "id": 10,
+      "nombre": "Coca-Cola",
+      "descripcion": "Coca-Cola de lata 355 ml",
+      "precio": 25,
+      "categoria": "bebidas",
+      "imagen": "refresco.png"
+    },
+    {
+      "id": 11,
+      "nombre": "Café Americano",
+      "descripcion": "Café caliente recién hecho",
+      "precio": 25,
+      "categoria": "bebidas",
+      "imagen": "cafe.jpg"
+    },
+
+    {
+      "id": 12,
+      "nombre": "Rebanada de Flan",
+      "descripcion": "Porción individual de flan casero",
+      "precio": 45,
+      "categoria": "postres",
+      "imagen": "flan.jpg"
+    },
+    {
+      "id": 13,
+      "nombre": "Arroz con Leche",
+      "descripcion": "Postre tradicional de arroz con canela",
+      "precio": 40,
+      "categoria": "postres",
+      "imagen": "arroz-lech.jpg"
+    },
+    {
+      "id": 14,
+      "nombre": "Gelatina de Mosaico",
+      "descripcion": "Gelatina de colores con leche",
+      "precio": 30,
+      "categoria": "postres",
+      "imagen": "gelatina.jpg"
+    },
+
+    {
+      "id": 15,
+      "nombre": "Pastel de Tres Leches - Rebanada",
+      "descripcion": "Porción individual de pastel tres leches",
+      "precio": 40,
+      "categoria": "pasteles",
+      "imagen": "pastel-tres-leches1.jpg"
+    },
+    {
+      "id": 16,
+      "nombre": "Pastel de Tres Leches - Pastel Completo",
+      "descripcion": "Pastel completo para varias personas",
+      "precio": 300,
+      "categoria": "pasteles",
+      "imagen": "pastel-tres-leches2.jpg"
+    },
+    {
+      "id": 17,
+      "nombre": "Pastel de Chocolate - Rebanada",
+      "descripcion": "Rebanada de pastel de chocolate",
+      "precio": 45,
+      "categoria": "pasteles",
+      "imagen": "pastel-chocolate.jpg"
+    }
+  ]
+
+  }
+}
