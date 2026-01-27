@@ -1,0 +1,180 @@
+{
+  "negocio": {
+    "titulo": "Sol y Mar Mariscos",
+    "header_titulo":"Sol y Mar Mariscos",
+    "nombre": "Sol y Mar Mariscost",
+    "eslogan": "Restaurante de pescados y mariscos con mas de 30 años de antigüedad",
+    "frase_menu": "Nuestros platillos los respaldan mas de 30 años de antigüedad",
+    "whatsapp": "526731000214",
+    "telefono": "673 732 1458",
+    "direccion": "Javier Mina 454, Zona Centro, Guamúchil, Sinaloa.",
+    "mapa_link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1127.4283179334286!2d-108.08254685789771!3d25.45802565690316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86bb87d9f648b337%3A0x477ea186d3647d9f!2sSol%20y%20Mar%20Mariscos!5e0!3m2!1ses-419!2smx!4v1769470249554!5m2!1ses-419!2smx",
+    "link_maps": "https://maps.app.goo.gl/rxtVTMbkDmBhZFt38",
+    "reservaciones": "673 732 1458",
+    "logo": "logo.png",
+    "pedido": {
+      "llevar": true,
+      "aqui": true,
+      "domicilio": true,
+      "mesa": true
+    },
+    "colores": {
+    "primario": "#fa0300",
+    "secundario": "#FFFFFF",
+    "btnagregar":"#FFFFFF"
+  }
+  },
+
+  "redes": [
+    {
+      "tipo": "facebook",
+      "url": "https://www.facebook.com/SolyMarMariscos/?locale=es_LA"
+    },
+    {
+      "tipo": "whatsapp",
+      "url": "https://wa.me/526731000214"
+    }
+  ],
+
+  "horarios": [
+    {
+      "dias": ["lunes", "martes", "miércoles", "jueves"],
+      "abre": "13:00",
+      "cierra": "23:00"
+    },
+    {
+      "dias": ["viernes", "sábado"],
+      "abre": "13:00",
+      "cierra": "00:00"
+    },
+    {
+      "dias": ["domingo"],
+      "abre": "09:00",
+      "cierra": "16:00"
+    }
+  ],
+
+  
+  "menu": {
+    "categorias": [
+      { "id": "cocteles", "nombre": "Cócteles" },
+      { "id": "ceviches", "nombre": "Ceviches" },
+      { "id": "tostadas", "nombre": "Tostadas" },
+      { "id": "platillos", "nombre": "Platillos" },
+      { "id": "especialidades", "nombre": "Especialidades" },
+      { "id": "bebidas", "nombre": "Bebidas" }
+    ],
+
+    "items": [
+      {
+        "id": 1,
+        "nombre": "Cóctel de Camarón",
+        "descripcion": "Camarón cocido con clamato, jitomate, cebolla, cilantro y aguacate",
+        "precio": 150,
+        "categoria": "cocteles",
+        "imagen": "coctel-camaron.jpg"
+      },
+      {
+        "id": 2,
+        "nombre": "Cóctel Mixto",
+        "descripcion": "Camarón y pulpo en salsa especial de la casa",
+        "precio": 180,
+        "categoria": "cocteles",
+        "imagen": "coctel-mixto.jpg"
+      },
+
+      {
+        "id": 3,
+        "nombre": "Ceviche de Pescado",
+        "descripcion": "Pescado fresco marinado con limón, jitomate, cebolla y cilantro",
+        "precio": 130,
+        "categoria": "ceviches",
+        "imagen": "ceviche-pescado.jpg"
+      },
+      {
+        "id": 4,
+        "nombre": "Ceviche de Camarón",
+        "descripcion": "Camarón curtido en limón con verduras frescas",
+        "precio": 160,
+        "categoria": "ceviches",
+        "imagen": "ceviche-camaron.jpg"
+      },
+
+      {
+        "id": 5,
+        "nombre": "Tostada de Atún",
+        "descripcion": "Atún fresco con aguacate y aderezo especial",
+        "precio": 70,
+        "categoria": "tostadas",
+        "imagen": "tostada-atun.jpg"
+      },
+      {
+        "id": 6,
+        "nombre": "Tostada de Camarón",
+        "descripcion": "Camarón preparado con pico de gallo y aguacate",
+        "precio": 65,
+        "categoria": "tostadas",
+        "imagen": "tostada-camaron.jpg"
+      },
+
+      {
+        "id": 7,
+        "nombre": "Filete de Pescado Empanizado",
+        "descripcion": "Filete crujiente acompañado de arroz y ensalada",
+        "precio": 190,
+        "categoria": "platillos",
+        "imagen": "filete-empanizado.jpg"
+      },
+      {
+        "id": 8,
+        "nombre": "Camarones a la Diabla",
+        "descripcion": "Camarones en salsa picante, acompañados de arroz",
+        "precio": 220,
+        "categoria": "platillos",
+        "imagen": "camarones-diabla.jpg"
+      },
+
+      {
+        "id": 9,
+        "nombre": "Mariscada Especial",
+        "descripcion": "Camarón, pulpo, pescado y callo en salsa de la casa",
+        "precio": 320,
+        "categoria": "especialidades",
+        "imagen": "mariscada.jpg"
+      },
+      {
+        "id": 10,
+        "nombre": "Aguachile Verde",
+        "descripcion": "Camarón crudo en salsa verde con pepino y cebolla morada",
+        "precio": 200,
+        "categoria": "especialidades",
+        "imagen": "aguachile-verde.jpg"
+      },
+
+      {
+        "id": 11,
+        "nombre": "Agua Fresca del Día",
+        "descripcion": "Agua natural de sabor",
+        "precio": 30,
+        "categoria": "bebidas",
+        "imagen": "agua-fresca.jpg"
+      },
+      {
+        "id": 12,
+        "nombre": "Coca-Cola",
+        "descripcion": "Refresco de lata 355 ml",
+        "precio": 30,
+        "categoria": "bebidas",
+        "imagen": "refresco.png"
+      },
+      {
+        "id": 13,
+        "nombre": "Cerveza Tecate",
+        "descripcion": "Cerveza bien fría",
+        "precio": 45,
+        "categoria": "bebidas",
+        "imagen": "cerveza.jpg"
+      }
+    ]
+  }
+}

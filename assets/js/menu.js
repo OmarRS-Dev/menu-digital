@@ -193,7 +193,7 @@ function detectarNegocio() {
 
   //if (host.includes("antena")) return "antena";  
 
-  return "brunch"; // fallback
+  return "solmar"; // fallback
 }
 
 function cargarIconos() {
