@@ -193,7 +193,7 @@ function detectarNegocio() {
 
   //if (host.includes("antena")) return "antena";  
 
-  return "abuela"; // fallback
+  return "demo"; // fallback
 }
 
 function cargarIconos() {
